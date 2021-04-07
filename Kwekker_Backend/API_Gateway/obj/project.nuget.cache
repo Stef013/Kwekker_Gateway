@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "79/2dEVtA1Nht8+ThRPc8NOyRVou1IlT1oW1Cwyaub8GA6JB2kCC1HN+DQnp6Hy5ZJTVWN00Y+qXGfjZYJgLpA==",
+  "dgSpecHash": "UbXfK40eCRb9rrFLlKVg7X3iU5POHKHJZxpVRbeyuQNx++D0DVwYaWEHE/1PeWSL2MZhy2DNou/xBlAcNd7eFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\API_Gateway\\API_Gateway.csproj",
+  "projectFilePath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\API_Gateway\\API_Gateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\StefanV\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\StefanV\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"

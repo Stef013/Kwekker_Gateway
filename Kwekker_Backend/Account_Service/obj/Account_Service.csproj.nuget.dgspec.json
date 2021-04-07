@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj": {}
+    "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj": {
+    "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj",
+        "projectUniqueName": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj",
         "projectName": "Account_Service",
-        "projectPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj",
+        "projectPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Account_Service\\Account_Service.csproj",
         "packagesPath": "C:\\Users\\StefanV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Account_Service\\obj\\",
+        "outputPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Account_Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\StefanV\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,23 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0-alpha.2, )"
             }
           },
           "imports": [

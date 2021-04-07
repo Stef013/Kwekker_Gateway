@@ -10,26 +10,26 @@
     {
       "endpoint": "/profile",
       "destination": {
-        "uri": "http://localhost:8091/profile/",
+        "uri": "https://localhost:44364/profile/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/kwek",
       "destination": {
-        "uri": "http://localhost:8091/kwek/",
+        "uri": "https://localhost:44375/kwek/",
         "requiresAuthentication": "false"
       }
     },
     {
       "endpoint": "/message",
       "destination": {
-        "uri": "http://localhost:8091/message/",
+        "uri": "https://localhost:44342/message/",
         "requiresAuthentication": "false"
       }
     }
   ],
   "authenticationService": {
-    "uri": "http://localhost:8080/api/auth/"
+    "uri": "https://localhost:8080/api/auth/"
   }
 }

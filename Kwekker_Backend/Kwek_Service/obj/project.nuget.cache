@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ylMaXfuGkhl/apB6qF5NK6t9tNXNqE4RhS9qCMPAXPGeUl2fqg0ixo6/wPKbw8qEzGw1Qpw+Yyfh3CW5NQTLAQ==",
+  "dgSpecHash": "E9Yg8KADQPwcjD/VJpitzyvejiopio5eRYXqqFKvT7EOoUdrjWdmrAlXkuQ12wAedX1X2KAcfAz0GSxnzSoXVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Kwek_Service\\Kwek_Service.csproj",
+  "projectFilePath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Kwek_Service\\Kwek_Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\StefanV\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
   ],

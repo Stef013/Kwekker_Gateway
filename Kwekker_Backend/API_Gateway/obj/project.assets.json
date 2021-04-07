@@ -129,11 +129,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\API_Gateway\\API_Gateway.csproj",
+      "projectUniqueName": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\API_Gateway\\API_Gateway.csproj",
       "projectName": "API_Gateway",
-      "projectPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\API_Gateway\\API_Gateway.csproj",
+      "projectPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\API_Gateway\\API_Gateway.csproj",
       "packagesPath": "C:\\Users\\StefanV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\API_Gateway\\obj\\",
+      "outputPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\API_Gateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\StefanV\\AppData\\Roaming\\NuGet\\NuGet.Config",

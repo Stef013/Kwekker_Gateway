@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KZRoMWiY4CT2N2x+p9jrv+PUqQhme1jsps7hFZ4QJj/vf6AQy9fW2xydSNwUvhFljf69f40dS23sNt8ABpmoBw==",
+  "dgSpecHash": "hfM2xUQQTXEjjrFytaDCewdjdqFw+/OCvWeWjYGvM0gt8OlCoCF8hZbe+JC6vWuIvBdFrOr84A+Y0haL6/8RAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Message_Service\\Message_Service.csproj",
+  "projectFilePath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Message_Service\\Message_Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\StefanV\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
   ],

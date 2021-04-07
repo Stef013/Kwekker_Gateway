@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Kwek_Service\\Kwek_Service.csproj",
+      "projectUniqueName": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Kwek_Service\\Kwek_Service.csproj",
       "projectName": "Kwek_Service",
-      "projectPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Kwek_Service\\Kwek_Service.csproj",
+      "projectPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Kwek_Service\\Kwek_Service.csproj",
       "packagesPath": "C:\\Users\\StefanV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\Kwekker\\Kwekker_Backend\\Kwek_Service\\obj\\",
+      "outputPath": "C:\\Users\\StefanV\\Documents\\School\\S6\\KwekkerBE\\Kwekker\\Kwekker_Backend\\Kwek_Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\StefanV\\AppData\\Roaming\\NuGet\\NuGet.Config",
