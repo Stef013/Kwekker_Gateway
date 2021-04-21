@@ -57,6 +57,14 @@ namespace API_Gateway
             HttpClient client = new HttpClient();
             HttpRequestMessage newRequest = new HttpRequestMessage(new HttpMethod(request.Method), CreateDestinationUri(request));
             newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
+
+            string token = request.Headers["Authorization"].FirstOrDefault();
+
+            if (token != null)
+            {
+                client.DefaultRequestHeaders.Add("Authorization", token);
+            }
+
             HttpResponseMessage response = await client.SendAsync(newRequest);
             return response;
         }

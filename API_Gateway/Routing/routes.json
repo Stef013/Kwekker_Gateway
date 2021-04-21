@@ -30,6 +30,6 @@
     }
   ],
   "authenticationService": {
-    "uri": "https://localhost:8080/api/auth/"
+    "uri": "https://localhost:44346/account/authorizetest"
   }
 }
