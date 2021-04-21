@@ -2,9 +2,11 @@
 using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace API_Gateway
@@ -41,9 +43,11 @@ namespace API_Gateway
 
             if (destination.RequiresAuthentication)
             {
-                string token = request.Headers["token"];
-                request.Query.Append(new KeyValuePair<string, StringValues>("token", new StringValues(token)));
-                HttpResponseMessage authResponse = await AuthenticationService.SendRequest(request);
+                string token = request.Headers["Authorization"].FirstOrDefault();
+                if(token == null) return ConstructErrorMessage("Authentication failed.");
+
+                HttpResponseMessage authResponse = await SendAuthRequest(token);
+
                 if (!authResponse.IsSuccessStatusCode) return ConstructErrorMessage("Authentication failed.");
             }
             return await destination.SendRequest(request);
@@ -57,6 +61,16 @@ namespace API_Gateway
                 Content = new StringContent(error)
             };
             return errorMessage;
+        }
+
+        public async Task<HttpResponseMessage> SendAuthRequest(string token)
+        {
+            HttpClient client = new HttpClient();
+            HttpRequestMessage newRequest = new HttpRequestMessage(new HttpMethod("GET"), "https://localhost:44346/account/authorizetest");
+            client.DefaultRequestHeaders.Add("Authorization", token);
+            //newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
+            HttpResponseMessage response = await client.SendAsync(newRequest);
+            return response;
         }
     }
 }

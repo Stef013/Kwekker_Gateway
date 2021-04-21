@@ -11,21 +11,21 @@
       "endpoint": "/profile",
       "destination": {
         "uri": "https://localhost:44364/profile/",
-        "requiresAuthentication": "false"
+        "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/kwek",
       "destination": {
         "uri": "https://localhost:44375/kwek/",
-        "requiresAuthentication": "false"
+        "requiresAuthentication": "true"
       }
     },
     {
       "endpoint": "/message",
       "destination": {
         "uri": "https://localhost:44342/message/",
-        "requiresAuthentication": "false"
+        "requiresAuthentication": "true"
       }
     }
   ],

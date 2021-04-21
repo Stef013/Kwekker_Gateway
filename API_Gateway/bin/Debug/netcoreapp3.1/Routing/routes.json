@@ -4,7 +4,7 @@
       "endpoint": "/account",
       "destination": {
         "uri": "https://localhost:44346/account/",
-        "requiresAuthentication": "false"
+        "requiresAuthentication": "true"
       }
     },
     {
