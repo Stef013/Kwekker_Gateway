@@ -25,7 +25,7 @@ namespace API_Gateway
         {
         }
 
-        private Destination()
+        public Destination()
         {
             Uri = "/";
             RequiresAuthentication = false;

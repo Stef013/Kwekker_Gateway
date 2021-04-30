@@ -28,23 +28,59 @@ namespace API_Gateway
         public async Task<HttpResponseMessage> RouteRequest(HttpRequest request)
         {
             string path = request.Path.ToString();
-            string basePath = '/' + path.Split('/')[1];
-            Destination destination;
+            bool isBasepath = false;
+            Destination destination = new Destination();
+
             try
             {
-                destination = Routes.First(r => r.Endpoint.Equals(basePath)).Destination;
+                destination = Routes.First(r => r.Endpoint.Equals(path)).Destination;
             }
             catch
             {
-                return ConstructErrorMessage("The path could not be found.");
+                isBasepath = true;
+            }
+
+            if (isBasepath)
+            {
+                string basePath = '/' + path.Split('/')[1];
+
+                try
+                {
+                    destination = Routes.First(r => r.Endpoint.Equals(basePath)).Destination;
+                }
+                catch
+                {
+                    return ConstructErrorMessage("The path could not be found.");
+                }
+            }
+
+            if (request.Method == "PUT" || request.Method == "DELETE")
+            {
+                destination.RequiresAuthentication = true;
             }
 
             if (destination.RequiresAuthentication)
             {
-                HttpResponseMessage authResponse = await AuthenticationService.SendRequest(request);
+                string token = request.Headers["Authorization"].FirstOrDefault();
+                if (token == null) return ConstructErrorMessage("Authentication failed.");
+
+                HttpResponseMessage authResponse = await SendAuthRequest(token);
                 if (!authResponse.IsSuccessStatusCode) return ConstructErrorMessage("Authentication failed.");
             }
+
             return await destination.SendRequest(request);
+        }
+
+        private bool checkMethod(HttpRequest request)
+        {
+            if(request.Method == "PUT" || request.Method == "DELETE")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private HttpResponseMessage ConstructErrorMessage(string error)
@@ -55,6 +91,16 @@ namespace API_Gateway
                 Content = new StringContent(error)
             };
             return errorMessage;
+        }
+
+        public async Task<HttpResponseMessage> SendAuthRequest(string token)
+        {
+            HttpClient client = new HttpClient();
+            HttpRequestMessage newRequest = new HttpRequestMessage(new HttpMethod("GET"), "https://localhost:44346/account/verify");
+            client.DefaultRequestHeaders.Add("Authorization", token);
+            //newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
+            HttpResponseMessage response = await client.SendAsync(newRequest);
+            return response;
         }
     }
 }
