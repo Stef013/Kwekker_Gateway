@@ -71,18 +71,6 @@ namespace API_Gateway
             return await destination.SendRequest(request);
         }
 
-        private bool checkMethod(HttpRequest request)
-        {
-            if(request.Method == "PUT" || request.Method == "DELETE")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         private HttpResponseMessage ConstructErrorMessage(string error)
         {
             HttpResponseMessage errorMessage = new HttpResponseMessage
@@ -96,7 +84,7 @@ namespace API_Gateway
         public async Task<HttpResponseMessage> SendAuthRequest(string token)
         {
             HttpClient client = new HttpClient();
-            HttpRequestMessage newRequest = new HttpRequestMessage(new HttpMethod("GET"), "https://localhost:44346/account/verify");
+            HttpRequestMessage newRequest = new HttpRequestMessage(new HttpMethod("GET"), "https://kwekkeraccountservice.azurewebsites.net/account/verify/");
             client.DefaultRequestHeaders.Add("Authorization", token);
             //newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
             HttpResponseMessage response = await client.SendAsync(newRequest);

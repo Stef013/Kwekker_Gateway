@@ -1,0 +1,21 @@
+language: csharp
+sudo: required
+mono: none
+dotnet: 3.1
+solution: Kwekker_Gateway.sln
+
+before_script: 
+- dotnet restore  
+
+script: 
+- dotnet build ".\API_Gateway" -c Release
+
+deploy:
+  provider: azure_web_apps
+  username: '%24KwekkerAPIGateway'
+  password: 524CNdvyzYAnD69RR3ygFjZpJPymN1MrohwP8WpMp14Dph1kwumJ9K3Mxl9c
+  site: KwekkerAPIGateway
+  verbose: true
+  skip_cleanup: true
+  on:
+      branch: dev
