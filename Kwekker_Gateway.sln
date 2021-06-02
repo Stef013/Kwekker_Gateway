@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Gateway", "API_Gateway\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82E0CB09-82D7-4D1C-B739-71E841488480}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		.travis.yml = .travis.yml
+		API_Gateway\Dockerfile = API_Gateway\Dockerfile
 	EndProjectSection
 EndProject
 Global
