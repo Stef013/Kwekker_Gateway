@@ -1,0 +1,29 @@
+#?filename=deploy-kubernetes.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kwekkergateway
+spec:
+  selector:
+    matchLabels:
+      app: kwekkergateway
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kwekkergateway
+    spec:
+      containers:
+        - name: kwekkergateway
+          image: stefv013/kwekker_gateway
+          imagePullPolicy: Always
+          ports:
+            - name: listen-port
+              containerPort: 8082
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+            limits:
+              cpu: 1
+              memory: 256Mi
