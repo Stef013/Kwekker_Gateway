@@ -25,22 +25,14 @@
       }
     },
     {
-      "endpoint": "/kwek",
-      "destination": {
-        "uri": "https://localhost:44375/kwek/",
-        "requiresAuthentication": "true"
-      }
-    },
-    {
       "endpoint": "/message",
       "destination": {
-        "uri": "https://localhost:44342/message/",
+        "uri": "https://kwekkermessageproducer.azurewebsites.net/message/",
         "requiresAuthentication": "true"
       }
     }
   ],
   "authenticationService": {
-    //"uri": "https://localhost:44346/account/verify",
     "uri": "https://kwekkeraccountservice.azurewebsites.net/account/verify/"
   }
 }
